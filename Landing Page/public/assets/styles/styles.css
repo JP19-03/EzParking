@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+li { list-style: none; }
+
+a { text-decoration: none; }
+
+a, img, span, input, label, button, textarea {
+    display: block;
+}
+
+button {
+   border: none;
+    background: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+input, textarea {
+    border: none;
+    font: inherit;
+    width: 100%;
+}
+
+body { background: white; }
+
+.container { padding-inline: 15px;}
+
+.h1, .h2, .h3{
+    color: blue;
+    font: bolder 50px 'Open Sans', sans-serif;
+    line-height: 1.2;
+}
+
+
+/* Header */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding-block: 20px;
+    box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.05);
+    height: 65px;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    z-index: 4;
+}
+
+.header.active { height: 330px; }
+
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-toggle-btn { font-size: 25px; }
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    top: 64px;
+    left: 0;
+    padding-inline: 30px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in-outs;
+}
+
+.header.active .navbar{
+    visibility: visible;
+    opacity: 1;
+}
+
+.navbar-list{
+    color: black;
+    font: bold 20px 'Open Sans', sans-serif;
+    padding-block:  8px;
+}
+
+:is(.navbar-link):is(:hover, :focus) { color: red;}
+
+/* Hero */
+.hero {
+    padding: 125px 0 80px;
+    background: white;
+}
+
+.hero-content { margin-bottom: 80px; }
